@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOLY</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <div></div>
+    <div id="blackout"></div>
+    <script defer src="main.js"></script>
+
+    <svg
+      id="logo"
+      class="logo"
+      width="200"
+      height="40"
+      viewBox="0 0 200 40"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="logo__left">
+        <rect width="100" height="40" fill="#fff" />
+        <g id="logo__joly">
+          <text x="3" y="34" id="logo__text" class="logo__text" fill="#000">JOLY</text>
+          <rect x="91" y="29" width="5" height="5" fill="#000" />
+        </g>
+      </g>
+      <g id="logo__right">
+        <text id="logo__bell" class="logo__text" x="105.3" y="34" fill="#fff">BELL</text>
+        <line x1="108" y1="0" x2="200" y2="0" stroke="#fff" stroke-width="4" />
+        <line x1="108" y1="40" x2="200" y2="40" stroke="#fff" stroke-width="4" />
+      </g>
+    </svg>
+  </body>
+</html>
