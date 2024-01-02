@@ -1,0 +1,84 @@
+.logo__text {
+  font-size: 39px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  font-family: Arial;
+  text-transform: uppercase;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  transform: scaleY(1.5);
+  user-select: none;
+}
+
+#logo {
+  position: fixed;
+  width: 700px;
+  height: 210px;
+  left: calc(50% - 350px);
+  top: calc(50% - 105px);
+}
+
+/* ANIMATIONS */
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+/* BACK */
+
+#logo__joly_back {
+  animation: 1.5s logoJolyBack var(--ease-out-quint) forwards;
+  transform-origin: 50px center;
+}
+
+@keyframes logoJolyBack {
+  0% {
+    transform: translateX(50px) scale(0.3);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(50px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+/* JOLY (left) */
+
+#logo__joly {
+  z-index: 2;
+  transform: translateX(-100px);
+  animation: 0.75s slideRight 0.75s var(--ease-out-quart) forwards;
+}
+
+/* BELL (right) */
+
+#logo__bell_lines {
+  opacity: 0;
+  animation: 1.5s logoBellLines var(--ease-out-quart) forwards;
+}
+
+@keyframes logoBellLines {
+  49% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-50px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
