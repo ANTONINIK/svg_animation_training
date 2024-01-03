@@ -13,10 +13,11 @@
 
 #logo {
   position: fixed;
-  width: 700px;
-  height: 210px;
-  left: calc(50% - 350px);
-  top: calc(50% - 105px);
+  width: 200px;
+  height: 60px;
+  transform: scale(4.5);
+  left: calc(50% - 100px);
+  top: calc(50% - 30px);
 }
 
 /* ANIMATIONS */
@@ -31,7 +32,19 @@
   }
 }
 
-/* BACK */
+/* MAIN */
+
+#logo {
+  animation: 0.5s main 1.5s var(--ease-out-quint) forwards;
+}
+
+@keyframes main {
+  100% {
+    transform: translateY(-290px) scale(1.2);
+  }
+}
+
+/* JOLY (left) */
 
 #logo__joly_back {
   animation: 1.5s logoJolyBack var(--ease-out-quint) forwards;
@@ -52,10 +65,7 @@
   }
 }
 
-/* JOLY (left) */
-
 #logo__joly {
-  z-index: 2;
   transform: translateX(-100px);
   animation: 0.75s slideRight 0.75s var(--ease-out-quart) forwards;
 }
@@ -80,5 +90,15 @@
   100% {
     transform: none;
     opacity: 1;
+  }
+}
+
+#logo__bell_back {
+  animation: 0.75s wipeOut 0.75s var(--ease-out-quart) forwards;
+}
+
+@keyframes wipeOut {
+  100% {
+    height: 0;
   }
 }

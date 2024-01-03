@@ -9,31 +9,32 @@
   </head>
   <body>
     <div id="blackout"></div>
-    <header id="header"></header>
-    <svg
-      id="logo"
-      class="logo"
-      width="200"
-      height="60"
-      viewBox="0 0 200 60"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g id="logo__left">
-        <rect id="logo__joly_back" width="100" height="60" fill="#fff" />
-        <g id="logo__joly">
-          <text x="3" y="34" id="logo__text" class="logo__text" fill="#000">joly</text>
-          <rect x="90" y="46" width="5" height="5" fill="#000" />
-        </g>
-      </g>
-      <g id="logo__right">
-        <g id="logo__bell">
-          <text id="logo__bell_text" class="logo__text" x="105" y="34" fill="#fff">bell</text>
-          <g id="logo__bell_lines">
-            <line x1="107" y1="0" x2="200" y2="0" stroke="#fff" stroke-width="4" />
-            <line x1="107" y1="60" x2="200" y2="60" stroke="#fff" stroke-width="4" />
+    <header id="header">
+      <svg
+        id="logo"
+        width="200"
+        height="60"
+        viewBox="0 0 200 60"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="logo__right">
+          <g id="logo__bell">
+            <text id="logo__bell_text" class="logo__text" x="105" y="34" fill="#fff">bell</text>
+            <rect id="logo__bell_back" x="107" y="9" width="98" height="43" fill="#000" />
+            <g id="logo__bell_lines">
+              <line x1="107" y1="1" x2="200" y2="1" stroke="#fff" stroke-width="2" />
+              <line x1="107" y1="59" x2="200" y2="59" stroke="#fff" stroke-width="2" />
+            </g>
           </g>
         </g>
-      </g>
-    </svg>
+        <g id="logo__left">
+          <rect id="logo__joly_back" width="100" height="60" fill="#fff" />
+          <g id="logo__joly">
+            <text x="3" y="34" class="logo__text" fill="#000">joly</text>
+            <rect x="90" y="46" width="5" height="5" fill="#000" />
+          </g>
+        </g>
+      </svg>
+    </header>
   </body>
 </html>
