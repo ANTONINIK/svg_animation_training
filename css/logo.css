@@ -12,12 +12,12 @@
 }
 
 #logo {
-  position: fixed;
+  position: absolute;
   width: 200px;
   height: 60px;
-  transform: scale(4.5);
+  transform: scale(3.5);
   left: calc(50% - 100px);
-  top: calc(50% - 30px);
+  top: calc(50vh - 60px);
 }
 
 /* ANIMATIONS */
@@ -36,11 +36,27 @@
 
 #logo {
   animation: 0.5s main 1.5s var(--ease-out-quint) forwards;
-}
+  }
 
 @keyframes main {
   100% {
-    transform: translateY(-290px) scale(1.2);
+    top: 45px;
+    transform: scale(1.2);
+  }
+}
+
+@media (width <= 1000px) {
+  #logo {
+    transform: scale(1.5);
+    animation: 0.5s main-mobile 1.5s var(--ease-out-quint) forwards;
+      }
+}
+
+@keyframes main-mobile {
+  100% {
+    left: -20px;
+    top: 8px;
+    transform: scale(0.6);
   }
 }
 
