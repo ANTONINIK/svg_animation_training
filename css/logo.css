@@ -1,8 +1,8 @@
 .logo__text {
   font-size: 39px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -2px;
-  font-family: Arial;
+  font-family: "Segoe UI";
   text-transform: uppercase;
   line-height: 0;
   padding: 0;
@@ -13,11 +13,12 @@
 
 #logo {
   position: absolute;
-  width: 200px;
+  width: 320px;
   height: 60px;
-  transform: scale(3.5);
-  left: calc(50% - 100px);
+  transform: scale(2.5);
+  left: calc(50% - 160px);
   top: calc(50vh - 60px);
+  animation: 0.5s main 1.5s var(--ease-out-quint) forwards;
 }
 
 /* ANIMATIONS */
@@ -26,17 +27,12 @@
   0% {
     transform: translateX(-100px);
   }
-
   100% {
     transform: none;
   }
 }
 
 /* MAIN */
-
-#logo {
-  animation: 0.5s main 1.5s var(--ease-out-quint) forwards;
-  }
 
 @keyframes main {
   100% {
@@ -45,29 +41,27 @@
   }
 }
 
-@media (width <= 1000px) {
+@media (width <= 950px) {
   #logo {
-    transform: scale(1.5);
-    animation: 0.5s main-mobile 1.5s var(--ease-out-quint) forwards;
-      }
-}
-
-@keyframes main-mobile {
-  100% {
-    left: -20px;
-    top: 8px;
-    transform: scale(0.6);
+    transform: scale(1);
+  }
+  @keyframes main {
+    100% {
+      left: -20px;
+      top: 8px;
+      transform: scale(0.6);
+    }
   }
 }
 
-/* JOLY (left) */
+/* ANTONINIK (left) */
 
-#logo__joly_back {
-  animation: 1.5s logoJolyBack var(--ease-out-quint) forwards;
+#logo__antoninik_back {
+  animation: 1.5s logoAntoninikBack var(--ease-out-quint) forwards;
   transform-origin: 50px center;
 }
 
-@keyframes logoJolyBack {
+@keyframes logoAntoninikBack {
   0% {
     transform: translateX(50px) scale(0.3);
     opacity: 0.3;
@@ -81,40 +75,42 @@
   }
 }
 
-#logo__joly {
+#logo__antoninik {
   transform: translateX(-100px);
   animation: 0.75s slideRight 0.75s var(--ease-out-quart) forwards;
 }
 
-/* BELL (right) */
+/* BLOG (right) */
 
-#logo__bell_lines {
+#logo__blog_lines {
   opacity: 0;
-  animation: 1.5s logoBellLines var(--ease-out-quart) forwards;
+  animation: 1.5s logoBlogLines var(--ease-out-quart) forwards;
 }
 
-@keyframes logoBellLines {
+@keyframes logoBlogLines {
   49% {
     opacity: 0;
   }
-
   50% {
     transform: translateX(-50px);
     opacity: 1;
   }
-
   100% {
     transform: none;
     opacity: 1;
   }
 }
 
-#logo__bell_back {
-  animation: 0.75s wipeOut 0.75s var(--ease-out-quart) forwards;
+#logo__blog_text {
+  animation: 1.5s wipeOut 0.75s var(--ease-out-quart) forwards;
+  clip-path: inset(0 0 100% 0);
 }
 
 @keyframes wipeOut {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
   100% {
-    height: 0;
+    clip-path: inset(0 0 0 0);
   }
 }
